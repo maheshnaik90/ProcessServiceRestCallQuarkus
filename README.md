@@ -10,10 +10,10 @@ This example shows
 * invoking remote REST service
 * control flow based on service calls
 
+Infrastructure requirements
+This quickstart requires an Infinispan server to be available and by default expects it to be on default port and localhost.
 
-
-In addition, it takes advantage of MicroProfile fault tolerance support to fallback if there are any errors
-during REST service invocation.
+You can install Infinispan server by downloading version 10.x from the official website.
 
 ## Build and run
 
@@ -24,10 +24,6 @@ You will need:
   - Environment variable JAVA_HOME set accordingly
   - Maven 3.6.2+ installed
 
-When using native image compilation, you will also need:
-  - GraalVM 19.1+ installed
-  - Environment variable GRAALVM_HOME set accordingly
-  - Note that GraalVM native image compilation typically requires other packages (glibc-devel, zlib-devel and gcc) to be installed too, please refer to GraalVM installation documentation for more details.
 
 ### Compile and Run in Local Dev Mode
 
@@ -84,7 +80,3 @@ Complete curl command can be found below:
 ```sh
 curl -X POST -H 'Content-Type:application/json' -H 'Accept:application/json' -d '{"username" : "nonexisting"}' http://localhost:8080/users
 ```
-
-
-
-
