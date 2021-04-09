@@ -14,7 +14,7 @@ Infrastructure requirements:
 
 This quickstart requires an Infinispan server to be available and by default expects it to be on default port and localhost.
 
-You can install Infinispan server by downloading version 10.x from the official website.
+You can install Infinispan server by downloading version 11.0.9 from the official website.
 
 ## Build and run
 
