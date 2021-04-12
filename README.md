@@ -10,11 +10,14 @@ This example shows
 * invoking remote REST service
 * control flow based on service calls
 
-Infrastructure requirements:
+## Infrastructure requirements
 
 This quickstart requires an Infinispan server to be available and by default expects it to be on default port and localhost.
 
-You can install Infinispan server by downloading version 11.0.9 from the official website.
+You can install Infinispan server by downloading version 11.0.9 from the [official website](https://infinispan.org/download/).
+
+* Infinispan installed and running
+<p align="center"><img src="docs/images/infinispanInstalledAndRunning.png"></p>
 
 ## Build and run
 
