@@ -1,0 +1,31 @@
+package org.acme;
+
+import org.acme.Product;
+
+rule "offer for Diamond"
+ruleflow-group "productdiscount"
+
+when
+
+ productObject: Product(type=="Diamond",productPrice>50000)
+
+then
+    System.out.println("Diamond rule invoked");
+    productObject.setDiscount(productObject.getProductPrice()*0.15);
+    
+end   
+
+rule "offer for Platinum"
+ruleflow-group "productdiscount"
+
+when
+ 
+ productObject: Product(type=="Platinum",productPrice>50000)
+
+then
+    System.out.println("Platinum rule invoked");
+    productObject.setDiscount(productObject.getProductPrice()*0.25);
+    
+    
+end     
+  

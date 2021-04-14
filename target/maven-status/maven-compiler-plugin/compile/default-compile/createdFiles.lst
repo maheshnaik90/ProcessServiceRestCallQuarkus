@@ -1,4 +1,5 @@
 org\acme\travels\User.class
 org\acme\travels\rest\UsersRemoteService.class
 org\acme\travels\services\UserService.class
+org\acme\Product.class
 org\acme\travels\services\AuditService.class

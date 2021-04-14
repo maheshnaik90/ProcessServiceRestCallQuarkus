@@ -13,7 +13,7 @@ public class ProjectModel implements org.drools.modelcompiler.CanonicalKieModule
 
     @Override
     public java.util.List<Model> getModels() {
-        return java.util.Arrays.asList();
+        return java.util.Arrays.asList(new org.acme.Rules49F42D626E9988546A3691D6941DC956());
     }
 
     public java.util.List<Model> getModelsForKieBase(String kieBaseName) {

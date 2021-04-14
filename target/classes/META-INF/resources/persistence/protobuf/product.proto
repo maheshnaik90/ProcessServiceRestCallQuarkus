@@ -1,0 +1,21 @@
+syntax = "proto2"; 
+package com.example.product; 
+import "kogito-index.proto";
+import "kogito-types.proto";
+option kogito_model = "Product";
+option kogito_id = "product";
+
+/* @Indexed */ 
+message Product { 
+	option java_package = "com.example.product";
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional double discount = 1; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string productName = 2; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional double productPrice = 3; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string type = 4; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional org.kie.kogito.index.model.KogitoMetadata metadata = 5; 
+}

@@ -9,13 +9,13 @@ import org.drools.core.util.KieFunctions;
 @io.quarkus.runtime.Startup()
 public class UsersProcess extends org.kie.kogito.process.impl.AbstractProcess<org.acme.travels.UsersModel> {
 
-    public UsersProcess(org.kie.kogito.app.Application app) {
-        this(app, new org.kie.kogito.handlers.UserService_get_2_Handler(), new org.kie.kogito.handlers.AuditService_auditUser_3_Handler());
+    public UsersProcess(org.kie.kogito.app.Application app, org.kie.kogito.process.ProcessInstancesFactory factory) {
+        this(app, factory, new org.kie.kogito.handlers.UserService_get_2_Handler(), new org.kie.kogito.handlers.AuditService_auditUser_3_Handler());
     }
 
     @javax.inject.Inject()
-    public UsersProcess(org.kie.kogito.app.Application app, org.kie.kogito.handlers.UserService_get_2_Handler userService_get_2_Handler, org.kie.kogito.handlers.AuditService_auditUser_3_Handler auditService_auditUser_3_Handler) {
-        super(app, java.util.Arrays.asList(userService_get_2_Handler, auditService_auditUser_3_Handler));
+    public UsersProcess(org.kie.kogito.app.Application app, org.kie.kogito.process.ProcessInstancesFactory factory, org.kie.kogito.handlers.UserService_get_2_Handler userService_get_2_Handler, org.kie.kogito.handlers.AuditService_auditUser_3_Handler auditService_auditUser_3_Handler) {
+        super(app, java.util.Arrays.asList(userService_get_2_Handler, auditService_auditUser_3_Handler), factory);
         activate();
     }
 

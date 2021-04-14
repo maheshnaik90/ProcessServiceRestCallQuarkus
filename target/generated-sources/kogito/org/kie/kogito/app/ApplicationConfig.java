@@ -22,6 +22,6 @@ public class ApplicationConfig extends org.kie.kogito.StaticConfig {
 
     @javax.inject.Inject
     public ApplicationConfig(Instance<org.kie.kogito.KogitoConfig> configs) {
-        super(new org.kie.kogito.Addons(java.util.Arrays.asList()), configs);
+        super(new org.kie.kogito.Addons(java.util.Arrays.asList("infinispan-persistence")), configs);
     }
 }
