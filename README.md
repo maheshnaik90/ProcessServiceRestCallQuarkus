@@ -84,3 +84,9 @@ Complete curl command can be found below:
 ```sh
 curl -X POST -H 'Content-Type:application/json' -H 'Accept:application/json' -d '{"username" : "nonexisting"}' http://localhost:8080/users
 ```
+
+Add below Entry in POM for Metrics:
+ <dependency>
+      <groupId>org.kie.kogito</groupId>
+      <artifactId>monitoring-prometheus-quarkus-addon</artifactId>
+    </dependency>
